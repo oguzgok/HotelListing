@@ -8,7 +8,7 @@ namespace HotelListing.Models
 {
     public class CreateCountryDTO
     {
-        public int Id { get; set; }
+        
         [Required]
         [StringLength(maximumLength: 150, ErrorMessage = "Country Name should be maximum 150 characters")]
         public string Name { get; set; }
@@ -16,7 +16,7 @@ namespace HotelListing.Models
         [StringLength(maximumLength: 2, ErrorMessage = "Country ShortName should be maximum 2 characters")]
         public string ShortName { get; set; }
     }
-    public class CountryDTO
+    public class CountryDTO : CreateCountryDTO
     {
         public int Id { get; set; }
 
